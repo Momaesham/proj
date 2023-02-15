@@ -1,13 +1,75 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+.slider{
+  width: 1000px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 50px;
+}
+.slide{
+  position: relative;
+  width: 1000px;
+}
+p{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  z-index: 2;
+}
+ul{
+  list-style: none;
+  display: flex;
+}
+.slider-controls{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider-controls button{
+  border: none;
+  background: none;
+  width: 24px;
+  height: 24px;
+  font-weight: 700;
+  color: white;
+}
+.slider-controls button:first-child:before{
+  content: '<';
+}
+.slider-controls button:last-child:before{
+  content: '>';
+}
+.slider-container{
+  position: relative;
+  transition:all .3s ease;
+}
+.slider-navigation{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.slider-navigation li{
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  background: #c2c2c2;
+  margin:0 5px;
+  border-radius: 50%;
+}
+.slider-navigation li.active{
+  background: #ffc1c1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.animal__container {
+  display: flex;
+  gap: 50px;
 }
